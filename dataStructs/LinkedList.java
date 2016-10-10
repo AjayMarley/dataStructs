@@ -125,15 +125,19 @@ class LinkedList{
         printList();
     }
 
-    void printList()
+    int printList()
     {
+        int size =0;
         Node tmp = head;
         System.out.println("List Contents");
         while(tmp != null && tmp.next != null){
             System.out.print(tmp.data + "->");
             tmp = tmp.next;
+            size++;
         }
         System.out.print(tmp.data);
+        size++;
+        return size;
     }
 
 }
